@@ -22,10 +22,12 @@ namespace PAIN_lab2
 
             this.points = points;
             this.observer = observer;
+            observer.PointRemoved += RemovePoint;
+            observer.PointAdded += PointAdded;
             initializeList();
         }
 
-        public override void refresh(Point p)
+        public override void refreshOnAdd(Point p)
         {
             points.Add(p);
             ListViewItem item = new ListViewItem(new String[] { id++ + "", p.getX() + "", p.getY() + "", p.getC() + "" });

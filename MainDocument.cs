@@ -17,6 +17,9 @@ namespace PAIN_lab2
 
         private List<ViewsForm> forms;
         private List<Point> points;
+        public event EventHandler PointAdded;
+        public event EventHandler PointRemoved;
+        public event EventHandler PointChanged;
 
         public MainDocument(List<Point> points)
         {
@@ -37,14 +40,14 @@ namespace PAIN_lab2
             }
         }
 
-        public void update(Point p)
+        public void addPoint(Point p)
         {
             points.Add(p);
 
             // emituje obslugiwane przez widoki zdarzenie
-            foreach (ViewsForm f in forms)
+            if (PointAdded != null)
             {
-                f.refresh(p);
+                PointAdded.Invoke(p, null);
             }
         }
         

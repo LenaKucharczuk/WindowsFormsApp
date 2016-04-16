@@ -22,10 +22,19 @@ namespace PAIN_lab2
 
             this.points = points;
             this.observer = observer;
+
+            observer.PointRemoved += RemovePoint;
+            observer.PointAdded += PointAdded;
+
             initializeTree();
         }
 
-        public override void refresh(Point p)
+        public override void refreshOnRemove(Point p)
+        {
+
+        }
+
+        public override void refreshOnAdd(Point p)
         {
             points.Add(p);
 

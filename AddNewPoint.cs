@@ -25,12 +25,7 @@ namespace PAIN_lab2
             InitializeComponent();
             this.observer = observer;
         }
-
-        public void notify()
-        {
-            observer.update(newPoint);
-        }
-
+        
         private void OK_Click(object sender, EventArgs e)
         {
             int x = Convert.ToInt32(this.textBox1.Text);
@@ -38,7 +33,7 @@ namespace PAIN_lab2
             int c = Convert.ToInt32(this.textBox3.Text);
 
             newPoint = new Point(x, y, c);
-            notify();
+            observer.addPoint(newPoint); 
 
             this.Close();
         }

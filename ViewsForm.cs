@@ -16,7 +16,20 @@ namespace PAIN_lab2
         {
             InitializeComponent();
         }
+        
+        public virtual void refreshOnAdd(Point p)
+        { }
 
-        public virtual void refresh(Point p) { }
+        public virtual void refreshOnRemove(Point p)
+        { }
+
+        protected virtual void PointAdded(object sender, EventArgs args)
+        {
+            Point p = (Point)sender;
+            refreshOnAdd(p);
+        }
+
+        protected virtual void RemovePoint(object sender, EventArgs args)
+        { }
     }
 }
