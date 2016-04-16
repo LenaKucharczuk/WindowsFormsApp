@@ -1,0 +1,27 @@
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe.config
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.pdb
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csprojResolveAssemblyReference.cache
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.Properties.Resources.resources
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csproj.GenerateResource.Cache
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.exe
+c:\users\lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.pdb
+C:\Users\Lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.Model.resources
+C:\Users\Lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewTree.resources
+C:\Users\Lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewList.resources
+C:\Users\Lena khan\documents\visual studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.AddNewPoint.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe.config
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.exe
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.pdb
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.pdb
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csprojResolveAssemblyReference.cache
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.AddNewPoint.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewList.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewTree.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.Properties.Resources.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csproj.GenerateResource.Cache
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe.config
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.exe
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.pdb
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.MainDocument.resources
