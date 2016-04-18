@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("people");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("people");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTree));
             this.treeView = new System.Windows.Forms.TreeView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newPointButton = new System.Windows.Forms.ToolStripButton();
+            this.DeleteButtonTree = new System.Windows.Forms.ToolStripButton();
+            this.ModifyButtonTree = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,17 +42,19 @@
             // 
             this.treeView.Location = new System.Drawing.Point(0, 28);
             this.treeView.Name = "treeView";
-            treeNode5.Name = "Node0";
-            treeNode5.Text = "people";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "people";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode1});
             this.treeView.Size = new System.Drawing.Size(284, 231);
             this.treeView.TabIndex = 0;
             // 
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newPointButton});
+            this.newPointButton,
+            this.DeleteButtonTree,
+            this.ModifyButtonTree});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(284, 25);
@@ -68,6 +72,26 @@
             this.newPointButton.Text = "newPoint";
             this.newPointButton.Click += new System.EventHandler(this.toolNewPoint_Click);
             // 
+            // DeleteButtonTree
+            // 
+            this.DeleteButtonTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteButtonTree.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButtonTree.Image")));
+            this.DeleteButtonTree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteButtonTree.Name = "DeleteButtonTree";
+            this.DeleteButtonTree.Size = new System.Drawing.Size(23, 22);
+            this.DeleteButtonTree.Text = "DeleteButtonTree";
+            this.DeleteButtonTree.Click += new System.EventHandler(this.DeleteButtonTree_Click);
+            // 
+            // ModifyButtonTree
+            // 
+            this.ModifyButtonTree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ModifyButtonTree.Image = ((System.Drawing.Image)(resources.GetObject("ModifyButtonTree.Image")));
+            this.ModifyButtonTree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ModifyButtonTree.Name = "ModifyButtonTree";
+            this.ModifyButtonTree.Size = new System.Drawing.Size(23, 22);
+            this.ModifyButtonTree.Text = "toolStripButton2";
+            this.ModifyButtonTree.Click += new System.EventHandler(this.ModifyButtonTree_Click);
+            // 
             // ViewTree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -79,6 +103,7 @@
             this.Text = "ViewTree";
             this.Activated += new System.EventHandler(this.ViewTree_Activated);
             this.Deactivate += new System.EventHandler(this.ViewTree_Deactivate);
+            this.Load += new System.EventHandler(this.ViewTree_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -91,6 +116,8 @@
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton newPointButton;
+        private System.Windows.Forms.ToolStripButton DeleteButtonTree;
+        private System.Windows.Forms.ToolStripButton ModifyButtonTree;
 
     }
 }

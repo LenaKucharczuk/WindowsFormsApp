@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewList));
             this.toolStripList = new System.Windows.Forms.ToolStrip();
             this.newPointButton = new System.Windows.Forms.ToolStripButton();
+            this.DeleteButtonList = new System.Windows.Forms.ToolStripButton();
+            this.ModifyButtonList = new System.Windows.Forms.ToolStripButton();
             this.listView = new System.Windows.Forms.ListView();
             this.label = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.x = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,7 +44,9 @@
             // toolStripList
             // 
             this.toolStripList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newPointButton});
+            this.newPointButton,
+            this.DeleteButtonList,
+            this.ModifyButtonList});
             this.toolStripList.Location = new System.Drawing.Point(0, 0);
             this.toolStripList.Name = "toolStripList";
             this.toolStripList.Size = new System.Drawing.Size(297, 25);
@@ -59,6 +63,26 @@
             this.newPointButton.Size = new System.Drawing.Size(23, 22);
             this.newPointButton.Text = "newPoint";
             this.newPointButton.Click += new System.EventHandler(this.toolNewPoint_Click);
+            // 
+            // DeleteButtonList
+            // 
+            this.DeleteButtonList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteButtonList.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButtonList.Image")));
+            this.DeleteButtonList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteButtonList.Name = "DeleteButtonList";
+            this.DeleteButtonList.Size = new System.Drawing.Size(23, 22);
+            this.DeleteButtonList.Text = "toolStripButton1";
+            this.DeleteButtonList.Click += new System.EventHandler(this.DeleteButtonList_Click);
+            // 
+            // ModifyButtonList
+            // 
+            this.ModifyButtonList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ModifyButtonList.Image = ((System.Drawing.Image)(resources.GetObject("ModifyButtonList.Image")));
+            this.ModifyButtonList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ModifyButtonList.Name = "ModifyButtonList";
+            this.ModifyButtonList.Size = new System.Drawing.Size(23, 22);
+            this.ModifyButtonList.Text = "toolStripButton2";
+            this.ModifyButtonList.Click += new System.EventHandler(this.ModifyButtonList_Click);
             // 
             // listView
             // 
@@ -122,5 +146,7 @@
         private System.Windows.Forms.ColumnHeader x;
         private System.Windows.Forms.ColumnHeader y;
         private System.Windows.Forms.ColumnHeader colour;
+        private System.Windows.Forms.ToolStripButton DeleteButtonList;
+        private System.Windows.Forms.ToolStripButton ModifyButtonList;
     }
 }

@@ -25,3 +25,13 @@ C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debu
 C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.exe
 C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.pdb
 C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.MainDocument.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.exe
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\bin\Debug\PAIN_lab2.pdb
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csprojResolveAssemblyReference.cache
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.AddNewPoint.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.MainDocument.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewList.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewTree.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.Properties.Resources.resources
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csproj.GenerateResource.Cache
+C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewsForm.resources

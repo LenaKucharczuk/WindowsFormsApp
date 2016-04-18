@@ -23,13 +23,19 @@ namespace PAIN_lab2
         public virtual void refreshOnRemove(Point p)
         { }
 
+        public virtual void refreshOnModify(Point p)
+        { }
+
         protected virtual void PointAdded(object sender, EventArgs args)
         {
             Point p = (Point)sender;
             refreshOnAdd(p);
         }
 
-        protected virtual void RemovePoint(object sender, EventArgs args)
+        protected virtual void refreshOnRemove(object sender, EventArgs args)
+        { }
+
+        protected virtual void ModifyPoint(object sender, EventArgs args)
         { }
     }
 }
