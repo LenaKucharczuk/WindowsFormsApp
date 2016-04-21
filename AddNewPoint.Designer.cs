@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxX = new System.Windows.Forms.TextBox();
+            this.textBoxY = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
+            this.errorX = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorY = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorX)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorY)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -47,23 +52,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "X:";
             // 
-            // textBox1
+            // textBoxX
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(105, 58);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxX.Location = new System.Drawing.Point(105, 58);
+            this.textBoxX.Name = "textBoxX";
+            this.textBoxX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxX.TabIndex = 1;
+            this.textBoxX.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxX_Validating);
             // 
-            // textBox2
+            // textBoxY
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textBoxY.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(105, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.textBoxY.Location = new System.Drawing.Point(105, 106);
+            this.textBoxY.Name = "textBoxY";
+            this.textBoxY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxY.TabIndex = 2;
+            this.textBoxY.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxY_Validating);
             // 
             // textBox3
             // 
@@ -101,10 +108,12 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.OK_Click);
+            //this.button1.Validating += new System.ComponentModel.CancelEventHandler(this.button1_Validating);
             // 
             // cancel
             // 
             this.cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancel.CausesValidation = false;
             this.cancel.Location = new System.Drawing.Point(171, 210);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
@@ -112,6 +121,14 @@
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // errorX
+            // 
+            this.errorX.ContainerControl = this;
+            // 
+            // errorY
+            // 
+            this.errorY.ContainerControl = this;
             // 
             // AddNewPoint
             // 
@@ -123,11 +140,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxY);
+            this.Controls.Add(this.textBoxX);
             this.Controls.Add(this.label1);
             this.Name = "AddNewPoint";
             this.Text = "AddNewPoint";
+            ((System.ComponentModel.ISupportInitialize)(this.errorX)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,12 +155,14 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        protected System.Windows.Forms.TextBox textBox1;
-        protected System.Windows.Forms.TextBox textBox2;
+        protected System.Windows.Forms.TextBox textBoxX;
+        protected System.Windows.Forms.TextBox textBoxY;
         protected System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.ErrorProvider errorX;
+        private System.Windows.Forms.ErrorProvider errorY;
     }
 }

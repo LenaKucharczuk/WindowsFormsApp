@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "ViewsForm";
             this.Text = "DocumentHideWindow";
-            //this.Load += new System.EventHandler(this.ViewsForm_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ViewsForm_FormClosing);
             this.ResumeLayout(false);
 
         }

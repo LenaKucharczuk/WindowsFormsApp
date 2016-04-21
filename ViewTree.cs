@@ -14,14 +14,12 @@ namespace PAIN_lab2
     {
         int i = 0;
         private List<Point> points;
-        private MainDocument observer;
 
-        public ViewTree(List<Point> points, MainDocument observer)
+        public ViewTree(List<Point> points, MainDocument observer) : base(observer)
         {
             InitializeComponent();
 
             this.points = points;
-            this.observer = observer;
 
             observer.PointRemoved += refreshOnRemove;
             observer.PointAdded += PointAdded;
@@ -37,9 +35,7 @@ namespace PAIN_lab2
             TreeNode Y = new TreeNode(p.getY() + "");
             treeView.Nodes[0].Nodes[i].Nodes[1].Nodes.Add(Y);
             TreeNode C = new TreeNode(p.getC() + "");
-            treeView.Nodes[0].Nodes[i].Nodes[2].Nodes.Add(C);
-
-            
+            treeView.Nodes[0].Nodes[i].Nodes[2].Nodes.Add(C);            
         }
 
         private void initializeTree()
@@ -58,15 +54,13 @@ namespace PAIN_lab2
             }
         }
 
-        private void toolNewPoint_Click(object sender, EventArgs e)
+        protected override void toolNewPoint_Click(object sender, EventArgs e)
         {
            new AddNewPoint(observer).Show();
         }
 
-        public override void refreshOnAdd(Point p)
+        protected override void refreshOnAdd(Point p)
         {
-            points.Add(p);
-
             i = treeView.Nodes[0].Nodes.Count;
             treeView.Nodes[0].Nodes.Add("person");            
             treeView.Nodes[0].Nodes[i].Nodes.Add("x");
@@ -81,6 +75,7 @@ namespace PAIN_lab2
         private void ViewTree_Activated(object sender, EventArgs e)
         {
             ToolStripManager.Merge(toolStrip1, observer.toolStrip1);
+            observer.StatusString(points.Count);
         }
 
         private void ViewTree_Deactivate(object sender, EventArgs e)
@@ -150,7 +145,7 @@ namespace PAIN_lab2
 
                     addNode(index, newPoint);
                     treeView.Nodes[0].Nodes[i].Tag = points[index];
-                    return;
+                    break;
                 }
             }
         }

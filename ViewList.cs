@@ -14,14 +14,12 @@ namespace PAIN_lab2
     {
         int id = 1;
         private List<Point> points;
-        private MainDocument observer;
 
-        public ViewList(List<Point> points, MainDocument observer)
+        public ViewList(List<Point> points, MainDocument observer) : base(observer)
         {
             InitializeComponent();
 
             this.points = points;
-            this.observer = observer;
             observer.PointRemoved += refreshOnRemove;
             observer.PointAdded += PointAdded;
             observer.PointChanged += ModifyPoint;
@@ -38,16 +36,15 @@ namespace PAIN_lab2
             }
         }
 
-        private void toolNewPoint_Click(object sender, EventArgs e)
+        protected override void toolNewPoint_Click(object sender, EventArgs e)
         {
-            new AddNewPoint(observer).Show();
+            new AddNewPoint(observer, null).Show();
         }
 
-        public override void refreshOnAdd(Point p)
+        protected override void refreshOnAdd(Point p)
         {
-            points.Add(p);
             ListViewItem item = new ListViewItem(new String[] { id++ + "", p.getX() + "", p.getY() + "", p.getC() + "" });
-            item.Tag = p; //?
+            item.Tag = p; 
             listView.Items.Add(item);
         }
 
@@ -102,7 +99,7 @@ namespace PAIN_lab2
         private void ViewList_Activated(object sender, EventArgs e)
         {
             ToolStripManager.Merge(toolStripList, observer.toolStrip1); // pasek w glownym, pasek w widoku
-
+            observer.StatusString(points.Count);
         }
 
         private void ViewList_Deactivate(object sender, EventArgs e)

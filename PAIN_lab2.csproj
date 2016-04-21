@@ -50,6 +50,9 @@
     <Compile Include="AddNewPoint.Designer.cs">
       <DependentUpon>AddNewPoint.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColourControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ModifyPoint.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -14,12 +14,12 @@ namespace PAIN_lab2
     {
         Point oldPoint;
         public ModifyPoint(MainDocument observer, Point oldPoint)
-            : base(observer)
+            : base(observer, oldPoint)
         {
             InitializeComponent();
             String[] s =  new String [] { oldPoint.getX() + "", oldPoint.getY() + "", oldPoint.getC() + "" };
-            this.textBox1.Text = s[0];
-            this.textBox2.Text = s[1];
+            this.textBoxX.Text = s[0];
+            this.textBoxY.Text = s[1];
             this.textBox3.Text = s[2];
 
             this.oldPoint = oldPoint;
@@ -27,8 +27,8 @@ namespace PAIN_lab2
 
         protected override void OK_Click(object sender, EventArgs e)
         {
-            int x = Convert.ToInt32(this.textBox1.Text);
-            int y = Convert.ToInt32(this.textBox2.Text);
+            int x = Convert.ToInt32(this.textBoxX.Text);
+            int y = Convert.ToInt32(this.textBoxY.Text);
             int c = Convert.ToInt32(this.textBox3.Text);
 
             newPoint = new Point(x, y, c);

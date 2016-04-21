@@ -12,10 +12,6 @@ namespace PAIN_lab2
 {
     public partial class MainDocument : Form
     {
-        // lista widoków - implementują interfejs, nie zna ich typu, wywołuje metody dla wszystkich
-        // lub zdarzenia: delegat wsk na funkcje, events
-
-        //private List<ViewsForm> forms;
         private List<Point> points;
         public event EventHandler PointAdded;
         public event EventHandler PointRemoved;
@@ -26,7 +22,6 @@ namespace PAIN_lab2
             InitializeComponent();
 
             this.points = points;
-
             ViewTree tree = new ViewTree(points, this);
             ViewList list = new ViewList(points, this);
             tree.MdiParent = this;
@@ -44,6 +39,7 @@ namespace PAIN_lab2
             {
                 PointAdded.Invoke(p, null);
             }
+            StatusString(points.Count);
         }
 
         public void modifyPoint(Point oldPoint, Point newPoint)
@@ -73,10 +69,11 @@ namespace PAIN_lab2
                 {
                     PointRemoved.Invoke(point, null);
                     points.RemoveAt(counter);
-                    return;
+                    break;
                 }
                 counter++;
             }
+            StatusString(points.Count);
         }        
 
         private void drzewoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +90,15 @@ namespace PAIN_lab2
             list.MdiParent = this;
             list.Show();
         }
-        
+
+        public void StatusString(int count)
+        {
+            statusStrip.Text = "Widok zawiera " + count + " punktów.";
+        }
+
+        private void MainDocument_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Dispose();
+        }
     }
 }

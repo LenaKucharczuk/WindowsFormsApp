@@ -86,15 +86,18 @@
             // 
             // listView
             // 
+            this.listView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.label,
             this.x,
             this.y,
             this.colour});
             this.listView.GridLines = true;
-            this.listView.Location = new System.Drawing.Point(0, 28);
+            this.listView.Location = new System.Drawing.Point(0, 18);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(297, 251);
+            this.listView.Size = new System.Drawing.Size(297, 322);
             this.listView.TabIndex = 1;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -102,7 +105,7 @@
             // label
             // 
             this.label.Text = "person";
-            this.label.Width = 123;
+            this.label.Width = 115;
             // 
             // x
             // 
@@ -112,18 +115,18 @@
             // y
             // 
             this.y.Text = "y";
-            this.y.Width = 37;
+            this.y.Width = 38;
             // 
             // colour
             // 
             this.colour.Text = "colour";
-            this.colour.Width = 98;
+            this.colour.Width = 109;
             // 
             // ViewList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(297, 281);
+            this.ClientSize = new System.Drawing.Size(297, 352);
             this.Controls.Add(this.listView);
             this.Controls.Add(this.toolStripList);
             this.Name = "ViewList";

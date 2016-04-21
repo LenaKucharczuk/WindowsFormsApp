@@ -40,13 +40,16 @@
             // 
             // treeView
             // 
+            this.treeView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView.Location = new System.Drawing.Point(0, 28);
             this.treeView.Name = "treeView";
             treeNode1.Name = "Node0";
             treeNode1.Text = "people";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1});
-            this.treeView.Size = new System.Drawing.Size(284, 231);
+            this.treeView.Size = new System.Drawing.Size(284, 406);
             this.treeView.TabIndex = 0;
             // 
             // toolStrip1
@@ -96,7 +99,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(284, 437);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.treeView);
             this.Name = "ViewTree";

@@ -35,3 +35,4 @@ C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debu
 C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.Properties.Resources.resources
 C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.csproj.GenerateResource.Cache
 C:\Users\lenak\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewsForm.resources
+C:\Users\Lena Khan\OneDrive\Documents\Visual Studio 2013\Projects\PAIN_lab2\obj\Debug\PAIN_lab2.ViewsForm.resources
