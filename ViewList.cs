@@ -53,7 +53,7 @@ namespace PAIN_lab2
             if (listView.SelectedItems.Count == 0)
                 return;
             ListViewItem item = listView.SelectedItems[0];
-            ModifyPoint mp = new ModifyPoint(observer, (Point)item.Tag);
+            AddNewPoint mp = new AddNewPoint(observer, (Point)item.Tag);
             mp.Show();
         }
 
@@ -69,9 +69,10 @@ namespace PAIN_lab2
                 {
                     int index = item.Index;
                     int id = index + 1;
-                    ListViewItem changedItem = new ListViewItem(new String[] { id + "", newPoint.getX() + "", newPoint.getY() + "", newPoint.getC() + "" });
-                    changedItem.Tag = item.Tag;
-                    listView.Items[index] = changedItem;
+                    
+                    item.SubItems[1].Text = Convert.ToString(newPoint.getX());
+                    item.SubItems[2].Text = Convert.ToString(newPoint.getY());
+                    item.SubItems[3].Text = Convert.ToString(newPoint.getC());
                 }
             }
         }

@@ -56,7 +56,7 @@ namespace PAIN_lab2
 
         protected override void toolNewPoint_Click(object sender, EventArgs e)
         {
-           new AddNewPoint(observer).Show();
+           new AddNewPoint(observer, null).Show();
         }
 
         protected override void refreshOnAdd(Point p)
@@ -116,7 +116,7 @@ namespace PAIN_lab2
             TreeNode item = treeView.SelectedNode;
             if (item.Tag != null)
             {
-                ModifyPoint mp = new ModifyPoint(observer, (Point)item.Tag);
+                AddNewPoint mp = new AddNewPoint(observer, (Point)item.Tag);
                 mp.Show();
             }
         }
@@ -135,16 +135,10 @@ namespace PAIN_lab2
                     int index = node.Index;
                     int id = index + 1;
 
-                    treeView.Nodes[0].Nodes[index].Nodes.RemoveAt(0);
-                    treeView.Nodes[0].Nodes[index].Nodes.RemoveAt(0);
-                    treeView.Nodes[0].Nodes[index].Nodes.RemoveAt(0);
-                    
-                    treeView.Nodes[0].Nodes[index].Nodes.Add("x");
-                    treeView.Nodes[0].Nodes[index].Nodes.Add("y");
-                    treeView.Nodes[0].Nodes[index].Nodes.Add("colour");
+                    treeView.Nodes[0].Nodes[index].Nodes[0].Nodes[0].Text = Convert.ToString(newPoint.getX());
+                    treeView.Nodes[0].Nodes[index].Nodes[1].Nodes[0].Text = Convert.ToString(newPoint.getY());
+                    treeView.Nodes[0].Nodes[index].Nodes[2].Nodes[0].Text = Convert.ToString(newPoint.getC());
 
-                    addNode(index, newPoint);
-                    treeView.Nodes[0].Nodes[i].Tag = points[index];
                     break;
                 }
             }

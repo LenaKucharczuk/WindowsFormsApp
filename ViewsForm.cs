@@ -47,7 +47,7 @@ namespace PAIN_lab2
 
         protected virtual void toolNewPoint_Click(object sender, EventArgs e)
         {
-            new AddNewPoint(observer).Show();
+            new AddNewPoint(observer, null).Show();
         }
 
         private void ViewsForm_FormClosing(object sender, FormClosingEventArgs e)

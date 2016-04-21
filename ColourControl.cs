@@ -9,7 +9,7 @@ namespace PAIN_lab2
 {
     class ColourControl : System.Windows.Forms.UserControl
     {
-        enum Colour {red, green, blue};
+        /*enum Colour {red, green, blue};
         private Colour colour;
 
         [Category("Apearance")]
@@ -21,7 +21,7 @@ namespace PAIN_lab2
         }
         [EditorAttribute( typeof(ColourControl), typeof(System.Drawing.Design.UITypeEditor))]
         [Category("Apearance")]
-        [BrowsableAttribute(true)]
+        [BrowsableAttribute(true)]*/
 
     }
 }

@@ -53,12 +53,6 @@
     <Compile Include="ColourControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ModifyPoint.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModifyPoint.Designer.cs">
-      <DependentUpon>ModifyPoint.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewsForm.cs">
       <SubType>Form</SubType>
     </Compile>
