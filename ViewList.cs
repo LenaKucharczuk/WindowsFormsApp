@@ -38,7 +38,7 @@ namespace PAIN_lab2
 
         protected override void toolNewPoint_Click(object sender, EventArgs e)
         {
-            new AddNewPoint(observer, null).Show();
+            new AddNewPoint(observer, null).ShowDialog();
         }
 
         protected override void refreshOnAdd(Point p)
@@ -54,7 +54,7 @@ namespace PAIN_lab2
                 return;
             ListViewItem item = listView.SelectedItems[0];
             AddNewPoint mp = new AddNewPoint(observer, (Point)item.Tag);
-            mp.Show();
+            mp.ShowDialog();
         }
 
         protected override void ModifyPoint(object sender, EventArgs args)

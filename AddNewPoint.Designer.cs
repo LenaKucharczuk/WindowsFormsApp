@@ -61,6 +61,7 @@
             this.textBoxX.Size = new System.Drawing.Size(100, 20);
             this.textBoxX.TabIndex = 1;
             this.textBoxX.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxX_Validating);
+            this.textBoxX.Validated += new System.EventHandler(this.textBoxX_Validated);
             // 
             // textBoxY
             // 
@@ -71,6 +72,7 @@
             this.textBoxY.Size = new System.Drawing.Size(100, 20);
             this.textBoxY.TabIndex = 2;
             this.textBoxY.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxY_Validating);
+            this.textBoxY.Validated += new System.EventHandler(this.textBoxY_Validated);
             // 
             // textBox3
             // 
@@ -108,7 +110,6 @@
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.OK_Click);
-            //this.button1.Validating += new System.ComponentModel.CancelEventHandler(this.button1_Validating);
             // 
             // cancel
             // 

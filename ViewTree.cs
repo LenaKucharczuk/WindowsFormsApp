@@ -30,6 +30,11 @@ namespace PAIN_lab2
 
         private void addNode(int i, Point p)
         {
+            treeView.Nodes[0].Nodes.Add("person");
+            treeView.Nodes[0].Nodes[i].Nodes.Add("x");
+            treeView.Nodes[0].Nodes[i].Nodes.Add("y");
+            treeView.Nodes[0].Nodes[i].Nodes.Add("colour");
+
             TreeNode X = new TreeNode(p.getX() + "");
             treeView.Nodes[0].Nodes[i].Nodes[0].Nodes.Add(X);
             TreeNode Y = new TreeNode(p.getY() + "");
@@ -42,12 +47,6 @@ namespace PAIN_lab2
         {
             foreach (Point p in points)
             {
-
-                treeView.Nodes[0].Nodes.Add("person");
-                treeView.Nodes[0].Nodes[i].Nodes.Add("x");
-                treeView.Nodes[0].Nodes[i].Nodes.Add("y");
-                treeView.Nodes[0].Nodes[i].Nodes.Add("colour");
-
                 addNode(i, p);
                 treeView.Nodes[0].Nodes[i].Tag = p;
                 ++i;
@@ -56,17 +55,13 @@ namespace PAIN_lab2
 
         protected override void toolNewPoint_Click(object sender, EventArgs e)
         {
-           new AddNewPoint(observer, null).Show();
+           new AddNewPoint(observer, null).ShowDialog();
         }
 
         protected override void refreshOnAdd(Point p)
         {
             i = treeView.Nodes[0].Nodes.Count;
-            treeView.Nodes[0].Nodes.Add("person");            
-            treeView.Nodes[0].Nodes[i].Nodes.Add("x");
-            treeView.Nodes[0].Nodes[i].Nodes.Add("y");
-            treeView.Nodes[0].Nodes[i].Nodes.Add("colour");
-
+            
             addNode(i, p);
             treeView.Nodes[0].Nodes[i].Tag = p;
             ++i;
@@ -82,12 +77,7 @@ namespace PAIN_lab2
         {
             ToolStripManager.RevertMerge(observer.toolStrip1);
         }
-
-        private void ViewTree_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void DeleteButtonTree_Click(object sender, EventArgs e)
         {
             TreeNode item = treeView.SelectedNode;
@@ -117,7 +107,7 @@ namespace PAIN_lab2
             if (item.Tag != null)
             {
                 AddNewPoint mp = new AddNewPoint(observer, (Point)item.Tag);
-                mp.Show();
+                mp.ShowDialog();
             }
         }
 

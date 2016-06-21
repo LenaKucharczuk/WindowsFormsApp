@@ -106,7 +106,6 @@
             this.Text = "ViewTree";
             this.Activated += new System.EventHandler(this.ViewTree_Activated);
             this.Deactivate += new System.EventHandler(this.ViewTree_Deactivate);
-            this.Load += new System.EventHandler(this.ViewTree_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -56,7 +56,6 @@ namespace PAIN_lab2
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            //this.Close();
             this.Dispose();
         }
         
@@ -78,6 +77,16 @@ namespace PAIN_lab2
                 e.Cancel = true;
                 errorY.SetError(textBoxY, "Wpisz liczbę");
             }
+        }
+
+        private void textBoxX_Validated(object sender, EventArgs e)
+        {
+            errorY.SetError(textBoxX, "");
+        }
+
+        private void textBoxY_Validated(object sender, EventArgs e)
+        {
+            errorY.SetError(textBoxY, "");
         }
     }
 }
